@@ -32,15 +32,15 @@ import { Collapse,
         return (
             <div>
                 <Navbar color="inverse" light expand="md">
-                    <NavbarBrand href="/">reactstrap</NavbarBrand>
+                    <NavbarBrand href="/">Picture Perfect</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
+                                <NavLink href="/Templates/">Templates</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                                <NavLink href="https://instagram.com" target="_blank">Instagram</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
@@ -49,16 +49,16 @@ import { Collapse,
                     <Container>
                         <Row>
                             <Col>
-                                <h1>Welcome to React</h1>
+                                <h1>Lets Make A Memory!</h1>
                                 <p>
                                     <Button
                                         tag="a"
                                         color="success"
                                         size="large"
-                                        href="http://reactstrap.github.io"
+                                       
                                         target="_blank"
                                     >
-                                        View Reactstrap Docs
+                                        Create
                                     </Button>
                                 </p>
                             </Col>
