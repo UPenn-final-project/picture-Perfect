@@ -70,6 +70,7 @@ import {
                         </Row>
                     </Container>
                 </Jumbotron>
+
                 <Jumbotron>
                     <Container>
                         <Row>
@@ -79,11 +80,18 @@ import {
                                     <div>
                                          <Card>
                                                 <CardBody>
-                                                        <CardTitle tag="h5">Saved template</CardTitle>
-                                                             <CardSubtitle tag="h6" className="mb-2 text-muted"></CardSubtitle></CardBody>
-                                                                    <img width="100%" src="/assets/318x180.svg" alt="Card image cap" /><CardBody>
-                                                         <CardLink href="#">continue working</CardLink>
-                                                <CardLink href="#"></CardLink>
+                                                
+        <div classNameName="card hoverable"/>
+            <div classNameName="card-content"/>
+                <span className="card-title"><strong>My template</strong></span>
+        
+        
+      
+            <br/>
+            <div className="card-action">
+                <button className="btn cyan darken-4 waves-effect waves-red" id="finishBtn">Update and Save Information</button>
+            </div>
+                                                                    
                                             </CardBody>
                                         </Card>
                                     </div>
