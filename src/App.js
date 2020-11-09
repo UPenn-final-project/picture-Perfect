@@ -1,3 +1,5 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Save from "./pages/Save";
 import { Collapse,
     Navbar,
     NavbarToggler,
@@ -11,12 +13,12 @@ import { Collapse,
     Jumbotron,
     Button } from 'reactstrap';
     import React from 'react';
+    import Home from "./pages/Home";
   import {
     Card, CardText, CardBody, CardLink,
     CardTitle, CardSubtitle
   } from 'reactstrap';
 import {Component} from 'react';
-import Carousal from './components/carousal'
     class App extends Component {
       constructor(props) {
           super(props);
@@ -39,7 +41,7 @@ import Carousal from './components/carousal'
                       <Collapse isOpen={this.state.isOpen} navbar>
                           <Nav className="ml-auto" navbar>
                               <NavItem>
-                                  <NavLink href="/Templates/">Saved scrapbooks</NavLink>
+                                  <NavLink href="/Save/">Saved scrapbooks</NavLink>
                               </NavItem>
                               <NavItem>
                                   <NavLink href="https://instagram.com" target="_blank">Instagram</NavLink>
@@ -47,6 +49,7 @@ import Carousal from './components/carousal'
                           </Nav>
                       </Collapse>
                   </Navbar>
+
                   <Jumbotron>
                       <Container>
                           <Row>
@@ -66,31 +69,15 @@ import Carousal from './components/carousal'
                           </Row>
                       </Container>
                   </Jumbotron>
-                <Carousal/>
-                  <Jumbotron>
-                      <Container>
-                          <Row>
-                               <Col>
-                                  <h1>continue working</h1>
-                                      <p>
-                                      <div>
-                                           <Card>
-                                                  <CardBody>
-          <div classNameName="card hoverable"/>
-              <div classNameName="card-content"/>
-                  <span className="card-title"><strong>My template</strong></span>
-              <br/>
-              <div className="card-action">
-                  <button className="btn cyan darken-4 waves-effect waves-red" id="finishBtn">Update and Save Information</button>
-              </div>
-                                              </CardBody>
-                                          </Card>
-                                      </div>
-                                  </p>
-                              </Col>
-                          </Row>
-                      </Container>
-                  </Jumbotron>
+                <BrowserRouter>
+        <div>
+            <Switch>
+             <Route path="/" component={Home} exact/>
+             <Route path="/Save" component={Save} exact/>
+           </Switch>
+        </div> 
+      </BrowserRouter>
+                 
               </div>
           );
       }
