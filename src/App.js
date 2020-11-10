@@ -13,6 +13,7 @@ import { Collapse,
     Jumbotron,
     Button } from 'reactstrap';
     import React from 'react';
+    import ReactDOM from "react-dom";
     import Home from "./pages/Home";
   import {
     Card, CardText, CardBody, CardLink,
@@ -24,7 +25,8 @@ import {Component} from 'react';
           super(props);
           this.toggle = this.toggle.bind(this);
           this.state = {
-              isOpen: false
+              isOpen: false,
+              name: ""
           };
       }
       toggle() {
@@ -54,16 +56,15 @@ import {Component} from 'react';
                       <Container>
                           <Row>
                               <Col>
+
                                   <h1>Lets Make A Memory!</h1>
                                   <p>
-                                      <Button
-                                          tag="a"
-                                          color="success"
-                                          size="large"
-                                          target="_blank"
-                                      >
-                                          Create
-                                      </Button>
+                                  <div className="App">
+        <h1>Hello!! {this.state.name}</h1>
+        <a href="javascript:;">
+          Began new Template
+        </a>
+      </div>
                                   </p>
                               </Col>
                           </Row>
@@ -82,4 +83,6 @@ import {Component} from 'react';
           );
       }
   }
+  const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
   export default App;
