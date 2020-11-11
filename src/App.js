@@ -1,6 +1,7 @@
+import {  ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } from 'reactstrap';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Save from "./pages/Save";
-import Modal from "./components/Modal";
+import AddTempModal from "./components/AddTempModal";
 import { Collapse,
     Navbar,
     NavbarToggler,
@@ -21,34 +22,18 @@ import { Collapse,
   } from 'reactstrap';
 import {Component} from 'react';
     class App extends Component {
-    //   constructor(props) {
-    //       super(props);
-    //       this.toggle = this.toggle.bind(this);
-    //       this.state = {
-    //           isOpen: false,
-    //           name: "",
-    //           modal: false
-    //       };
-    //   }
-    state = {
-                  isOpen: false,
-                  name: "",
-                  modal: false
-              };
-      toggle() {
-          this.setState({
-              isOpen: !this.state.isOpen
-          });
+      constructor(props) {
+          super(props);
+          this.toggleModal = this.toggleModal.bind(this);
+          this.state = {
+              isOpen: false
+          };
       }
-      modalOpen =() => {
-        this.setState({ modal: true });
-      }
-      modalClose =() => {
+      toggleModal() {
         this.setState({
-          modalInputName: "",
-          modal: false
+            isOpen: !this.state.isOpen
         });
-      }
+    }
       render() {
           return (
               <div>
@@ -66,44 +51,23 @@ import {Component} from 'react';
                           </Nav>
                       </Collapse>
                   </Navbar>
+                  <AddTempModal toggle={this.toggleModal} isOpen={this.state.isOpen}  ></AddTempModal>
 
                   <Jumbotron>
                       <Container>
                           <Row>
                               <Col>
-
                                   <h1>Lets Make A Memory!</h1>
                                   <p>
-                                      <Button onClick={this.modalOpen}>
-
-
-                                          <h1>Began new template</h1>
-
+                                      <Button
+                                         onClick={this.toggleModal}
+                                          tag="a"
+                                          color="success"
+                                          size="large"
+                                          target="_blank"
+                                      >
+                                          Create
                                       </Button>
-                                      <Modal show={this.state.modal} handleClose={e => this.modalClose(e)}
-                                      ><h2>Hello Modal</h2>
-                                      <div className="form-group">
-                                        <label>Enter Name:</label>
-                                        <input
-                                          type="text"
-                                          value={this.state.modalInputName}
-                                          name="modalInputName"
-                                          onChange={e => this.handleChange(e)}
-                                          className="form-control"
-                                        />
-                                      </div>
-                                      <div className="form-group">
-                                        <button onClick={e => this.handleSubmit(e)} type="button">
-                                          Save
-                                        </button>
-                                      </div>
-                                    </Modal>
-                                  {/* <div className="App">
-        <h1>Hello!! {this.state.name}</h1>
-        <a href="javascript:;">
-          Began new Template
-        </a>
-      </div> */}
                                   </p>
                               </Col>
                           </Row>
@@ -122,4 +86,4 @@ import {Component} from 'react';
           );
       }
   }
-  export default App;
+  export default App; 
