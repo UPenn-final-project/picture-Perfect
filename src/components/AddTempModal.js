@@ -10,10 +10,11 @@ render(){
     return(
         <div>
         <Modal fade={false} isOpen={this.props.isOpen} toggle={this.props.toggle} >
-            <ModalHeader toggle={this.props.toggle}>Modal title</ModalHeader>
+            <ModalHeader toggle={this.props.toggle}>add notes</ModalHeader>
                 
             <ModalBody>
             <Input type="textarea" placeholder="Write something (data should remain in modal if unmountOnClose is set to false)" rows={5} />
+            Upload a photo<Input type="image" src="" alt="Submit" width="900" height="900"/>
                 </ModalBody>
             <ModalFooter>
                 <Button color="primary" onClick={this.props.toggle}>Do Something</Button>{' '}
