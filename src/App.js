@@ -1,5 +1,7 @@
+import {  ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } from 'reactstrap';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Save from "./pages/Save";
+import AddTempModal from "./components/AddTempModal";
 import { Collapse,
     Navbar,
     NavbarToggler,
@@ -22,16 +24,16 @@ import {Component} from 'react';
     class App extends Component {
       constructor(props) {
           super(props);
-          this.toggle = this.toggle.bind(this);
+          this.toggleModal = this.toggleModal.bind(this);
           this.state = {
               isOpen: false
           };
       }
-      toggle() {
-          this.setState({
-              isOpen: !this.state.isOpen
-          });
-      }
+      toggleModal() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
       render() {
           return (
               <div>
@@ -49,6 +51,7 @@ import {Component} from 'react';
                           </Nav>
                       </Collapse>
                   </Navbar>
+                  <AddTempModal toggle={this.toggleModal} isOpen={this.state.isOpen}  ></AddTempModal>
 
                   <Jumbotron>
                       <Container>
@@ -57,6 +60,7 @@ import {Component} from 'react';
                                   <h1>Lets Make A Memory!</h1>
                                   <p>
                                       <Button
+                                         onClick={this.toggleModal}
                                           tag="a"
                                           color="success"
                                           size="large"
@@ -82,4 +86,4 @@ import {Component} from 'react';
           );
       }
   }
-  export default App;
+  export default App; 
