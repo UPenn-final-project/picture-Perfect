@@ -13,10 +13,11 @@ render(){
             <ModalHeader toggle={this.props.toggle}>Modal title</ModalHeader>
                 
             <ModalBody>
-                <p>somejbe</p>
+            <Input type="textarea" placeholder="Write something (data should remain in modal if unmountOnClose is set to false)" rows={5} />
                 </ModalBody>
             <ModalFooter>
                 <Button color="primary" onClick={this.props.toggle}>Do Something</Button>{' '}
+                <Button color="success" onClick={this.props.toggle}>Save</Button>{' '} 
                 <Button color="secondary" onClick={this.props.toggle}>Cancel</Button>
             </ModalFooter>
         </Modal>
