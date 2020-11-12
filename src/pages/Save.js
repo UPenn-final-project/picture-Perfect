@@ -30,7 +30,7 @@ import React, { Component } from 'react';
     <span className="card-title"><strong>My template</strong></span>
     <br/>
     <div className="card-action">
-    <button className="btn cyan darken-4 waves-effect waves-red" id="finishBtn">Update and Save Information</button>
+    <Button className="btn cyan darken-4 waves-effect waves-red" id="finishBtn">Update and Save Information</Button>
     </div>
                                 </CardBody>
                             </Card>
@@ -45,5 +45,3 @@ import React, { Component } from 'react';
 
 
 export default Save;
-
-
