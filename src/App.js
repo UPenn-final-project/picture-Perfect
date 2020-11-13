@@ -2,6 +2,7 @@ import {  ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } f
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Save from "./pages/Save";
 import AddTempModal from "./components/AddTempModal";
+import Cloudinary from "./components/Cloudinary";
 import { Collapse,
     Navbar,
     NavbarToggler,
