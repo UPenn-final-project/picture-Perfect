@@ -15,12 +15,11 @@ render(){
                 
             <ModalBody>
             <Input type="textarea" placeholder="Write something (data should remain in modal if unmountOnClose is set to false)" rows={5} />
-            Upload a photo<Input type="image" src="" alt="Submit" width="900" height="900"/>
+            <i className="fas fa-portrait"></i>Upload a photo<Input/>
             <Carousal/>
                 </ModalBody>
             <ModalFooter>
             <Button color="success" onClick={this.props.toggle}>Upload photo</Button>{' '} 
-                <Button color="primary" onClick={this.props.toggle}>Do Something</Button>{' '}
                 <Button color="success" onClick={this.props.toggle}>Save</Button>{' '} 
                 <Button color="secondary" onClick={this.props.toggle}>Cancel</Button>
             </ModalFooter>

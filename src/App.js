@@ -2,6 +2,7 @@ import {  ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } f
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Save from "./pages/Save";
 import AddTempModal from "./components/AddTempModal";
+import Cloudinary from "./components/Cloudnary";
 import { Collapse,
     Navbar,
     NavbarToggler,
@@ -57,18 +58,7 @@ import {Component} from 'react';
                       <Container>
                           <Row>
                               <Col>
-                                  <h1>Lets Make A Memory!</h1>
-                                  <p>
-                                      <Button
-                                         onClick={this.toggleModal}
-                                          tag="a"
-                                          color="success"
-                                          size="large"
-                                          target="_blank"
-                                      >
-                                          Create
-                                      </Button>
-                                  </p>
+                                          <Cloudinary/>
                               </Col>
                           </Row>
                       </Container>
