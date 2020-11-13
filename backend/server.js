@@ -11,7 +11,7 @@ const app = express();
 const User = require("./user");
 
 mongoose.connect(
-  "mongodb+srv://{Place Your Username Here!}:{Place Your Password Here!}@cluster0-q9g9s.mongodb.net/test?retryWrites=true&w=majority",
+  "mongodb+srv://{mamustaaf@gtcc.edu}:{Elkshoals1}@cluster0-q9g9s.mongodb.net/test?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
